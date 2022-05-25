@@ -1,0 +1,43 @@
+@import url(animate.min.css);
+@import url(normalize.css);
+@import url(meanmenu.css);
+@import url(owl.carousel.min.css);
+@import url(slick.css);
+@import url(jquery-ui.css);
+@import url(nice-select.css);
+
+/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
+* {
+     box-sizing: border-box !important;
+     transition: ease all 0.5s;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+body {
+     color: #666666;
+     font-size: 14px;
+     font-family: Poppins;
+     line-height: 1.80857;
+     font-weight: normal;
+     overflow-x: hidden !important;
+}
+
+
+
+.header_section {
+	width: 100%;
+	float: left;
+	background-image: url(/static/images/fashion.png);
+	padding-bottom: 20px;
+	background-size: 100%;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 20px;
+}
+.registr {
+    padding-left: 15px;
+}
