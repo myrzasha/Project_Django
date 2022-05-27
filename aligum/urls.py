@@ -8,11 +8,11 @@ urlpatterns = [
 
     # login
 
-    path('login/', login, name='login'),
+    path('login/', loginUser, name='login'),
 
     # logout
 
-    path('logout/', logout, name='logout'),
+    path('logout/', logoutUser, name='logout'),
 
     # READ
 

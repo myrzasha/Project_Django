@@ -297,6 +297,7 @@ blockquote::before{color:rgba(0,0,0,.05);}
 #backtotop{color:#FFFFFF; background-color:#F4BF4F;}
 
 
+
 /* Tables + Comments */
 table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#D7D7D7;}
 #comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#F4BF4F;}
@@ -383,3 +384,4 @@ table a, #comments a{background-color:inherit;}
 	.font-x2{font-size:1.4rem;}
 	.font-x3{font-size:1.6rem;}
 }
+

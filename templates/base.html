@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 {% load static %}
 <!--
 Template Name: Aerogem
@@ -19,34 +18,36 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="header_section">
-  <div class="wrapper row0">
-    <div id="topbar" class="hoc clear">
-      <!-- ################################################################################################ -->
-      <div class="fl_left">
-        <ul class="nospace">
-          <li><i class="fa fa-phone"></i> +996 (312) 45 67 89</li>
-          <li><i class="fa fa-envelope-o"></i> madekg@poshiv.com</li>
-        </ul>
-      </div>
-      <div class="fl_right">
-        <ul class="nospace">
-          <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
-          <li><a href="{% url 'login' %}">Login</a></li>
-          <li><a href="{% url 'register' %}#">Register</a></li>
-        </ul>
-      </div>
-      <!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div class="fl_left">
+      <ul class="nospace">
+        <li><i class="fa fa-phone"></i> +996 (312) 45 67 89</li>
+        <li><i class="fa fa-envelope-o"></i> madekg@poshiv.com</li>
+      </ul>
     </div>
+    <div class="fl_right">
+      <ul class="nospace">
+        <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        {% if request.user.is_authenticated %}
+        Добро пожаловать {{ user.username }} | <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
+        <li><a href="{% url 'register' %}">Register</a></li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
   </div>
- </div>
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- ################################################################################################ -->
-  <!-- Top Background Image Wrapper -->
-  <div class="bgded overlay" style="background-image:url({% static 'images/fashion.png' %})" >
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url({% static 'images/fashion.png' %})" >
   <!-- ################################################################################################ -->
   <div class="wrapper row1">
     <header id="header" class="hoc clear">
@@ -60,7 +61,7 @@ Licence URI: http://www.os-templates.com/template-terms
           <li class="active"><a href="{% url 'index' %}">Home</a></li>
           <li><a class="drop" href="#">Pages</a>
             <ul>
-              <li><a href="{% static 'pages/gallery.html' %}">Gallery</a></li>
+              <li><a href="{% url 'gallery' %}">Gallery</a></li>
               <li><a href="{% static 'pages/full-width.html' %}">Full Width</a></li>
               <li><a href="{% static 'pages/sidebar-left.html' %}">Sidebar Left</a></li>
               <li><a href="{% static 'pages/sidebar-right.html' %}">Sidebar Right</a></li>
@@ -95,7 +96,8 @@ Licence URI: http://www.os-templates.com/template-terms
     </div>
     <!-- ################################################################################################ -->
   </div>
-
+  <!-- ################################################################################################ -->
+</div>
 
 
 

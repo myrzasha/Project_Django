@@ -17,7 +17,7 @@ def register(request):
         form = UserRegistrationForm()
     return render(request, 'aligum/register.html', {'register_form': form})
 
-def login(request):
+def loginUser(request):
     if request.method == "POST":
         form = UserAuthenticationForm(data=request.POST)
         if form.is_valid():
@@ -29,7 +29,7 @@ def login(request):
         form = UserAuthenticationForm
     return render(request, 'aligum/login.html', {'login_form':form})
 
-def logout(request):
+def logoutUser(request):
     logout(request)
     return redirect('login')
 
@@ -42,11 +42,13 @@ def gallery(request):
     )
 
 def index(request):
+   # post = Post.objects.all()
     products = Product.objects.all()
     return render(
         request,
         'aligum/index.html',
-        {'products' : products}
+        {'products' : products},
+     #  {'post' : post}
     )
 
 def about(request):
