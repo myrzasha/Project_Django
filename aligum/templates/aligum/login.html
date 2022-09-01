@@ -4,7 +4,7 @@
 
 <h1>Login</h1>
 
-<div style="background-color: #888888">
+<div style="background-color: #888888; padding: 10px 50px">
     <form style="color: #1b1b1b" method="post" action=".">
             {% csrf_token %}
             {{ login_form.as_p }}

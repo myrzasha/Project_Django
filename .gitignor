@@ -1,4 +1,5 @@
-venv
+
+vv
 .env
 .idea
 db.sqlite3

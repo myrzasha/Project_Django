@@ -4,14 +4,16 @@
 
 <div class="registr">
     <h3>Регистрация</h3>
-    <div style="background-color: #888888" >
-        <form style="color: #1b1b1b" method="post" action=".">
-            {% csrf_token %}
-            {{ register_form.as_p }}
 
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
+        <div style="background-color: #888888; padding: 10px 50px" >
+            <form style="color: #1b1b1b" method="post" action=".">
+                {% csrf_token %}
+                {{ register_form.as_p }}
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
 </div>
 
 {% endblock content %}
